@@ -109,6 +109,19 @@
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
+      },
+      "Cooking.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MediatR": "12.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Cooking.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cooking.Domain.dll": {}
+        }
       }
     }
   },
@@ -310,10 +323,16 @@
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Cooking.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Cooking.Domain/Cooking.Domain.csproj",
+      "msbuildProject": "../Cooking.Domain/Cooking.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Cooking.Domain >= 1.0.0",
       "Dapper >= 2.1.35",
       "FluentValidation >= 11.9.1",
       "FluentValidation.DependencyInjectionExtensions >= 11.9.1",
@@ -347,7 +366,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\developer\\Cooking\\Cooking.Domain\\Cooking.Domain.csproj": {
+              "projectPath": "C:\\developer\\Cooking\\Cooking.Domain\\Cooking.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

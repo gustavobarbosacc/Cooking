@@ -1,0 +1,13 @@
+C:\developer\Cooking\Cooking.Domain\bin\Debug\net8.0\Cooking.Domain.deps.json
+C:\developer\Cooking\Cooking.Domain\bin\Debug\net8.0\Cooking.Domain.dll
+C:\developer\Cooking\Cooking.Domain\bin\Debug\net8.0\Cooking.Domain.pdb
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.csproj.AssemblyReference.cache
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.AssemblyInfoInputs.cache
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.AssemblyInfo.cs
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.csproj.CoreCompileInputs.cache
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.sourcelink.json
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.dll
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\refint\Cooking.Domain.dll
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\Cooking.Domain.pdb
+C:\developer\Cooking\Cooking.Domain\obj\Debug\net8.0\ref\Cooking.Domain.dll
