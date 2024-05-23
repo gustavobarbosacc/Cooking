@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Cooking.Domain.Abstraction;
+namespace Cooking.Domain.Abstractions;
 
 public interface IDomainEvent : INotification
 {

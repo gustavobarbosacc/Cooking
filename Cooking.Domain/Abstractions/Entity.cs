@@ -1,5 +1,5 @@
 ﻿
-namespace Cooking.Domain.Abstraction;
+namespace Cooking.Domain.Abstractions;
 
 public class Entity : IEntity
 {

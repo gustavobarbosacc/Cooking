@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Cooking.Domain.Abstraction;
+namespace Cooking.Domain.Abstractions;
 
 public class Result
 {

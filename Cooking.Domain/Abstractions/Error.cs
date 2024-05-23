@@ -1,4 +1,4 @@
-﻿namespace Cooking.Domain.Abstraction;
+﻿namespace Cooking.Domain.Abstractions;
 
 public record Error(string Code, string Name)
 {

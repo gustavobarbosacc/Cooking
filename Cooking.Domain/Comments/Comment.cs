@@ -1,33 +1,26 @@
-﻿using Cooking.Domain.Abstraction;
+﻿using Cooking.Domain.Abstractions;
 using Cooking.Domain.Recipes;
 using Cooking.Domain.Users;
 
 namespace Cooking.Domain.Comments;
 
-public class Comment: Entity
+public class Comment(
+    Guid id,
+    Guid userId,
+    Guid recipeId,
+    string remark) : Entity(id)
 {
-    public User User { get; set; }
-    public Recipe Recipe { get; set; }
-    public string Remark { get; set; }
-
-    public Comment(
-        Guid id,
-        User user,
-        Recipe recipe,
-        string remark) : base(id)
-    {
-        User = user;
-        Recipe = recipe;
-        Remark = remark;
-    }
+    public Guid UserId { get; set; } = userId;
+    public Guid RecipeId { get; set; } = recipeId;
+    public string Remark { get; set; } = remark;
 
     public static Comment Create(
-        User user,
+        Guid userId,
         Recipe recipe,
         string remark) 
         => new (
             Guid.NewGuid(),
-            user,
-            recipe,
+            userId,
+            recipe.Id,
             remark);
 }

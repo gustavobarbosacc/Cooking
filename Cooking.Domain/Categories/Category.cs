@@ -1,15 +1,10 @@
-﻿using Cooking.Domain.Abstraction;
+﻿using Cooking.Domain.Abstractions;
 
 namespace Cooking.Domain.Categories;
 
-public class Category : Entity
+public class Category(Guid id, string name) : Entity(id)
 {
-    public string Name { get; set; }
-
-    public Category(Guid id, string name) : base(id)
-    {
-        Name = name;
-    }
+    public string Name { get; set; } = name;
 
     public static Category Create(string name) 
         => new(Guid.NewGuid(), name);
