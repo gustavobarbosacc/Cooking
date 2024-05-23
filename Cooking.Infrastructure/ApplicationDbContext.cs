@@ -1,5 +1,4 @@
 ﻿using Cooking.Application.Abstractions.Clock;
-using Cooking.Application.Exceptions;
 using Cooking.Domain.Abstractions;
 using Cooking.Infrastructure.Outbox;
 using Microsoft.EntityFrameworkCore;

@@ -23,6 +23,10 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(x => x.Role)
             .IsRequired()
-            .HasConversion<short>();     
+            .HasConversion<short>();
+
+        builder.Property(e => e.CreatedOnUtc).IsRequired();
+        builder.Property(e => e.UpdatedOnUtc);
+        builder.Property(e => e.RemoveOnUtc);
     }
 }

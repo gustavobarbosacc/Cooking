@@ -1,27 +1,24 @@
-﻿using Dapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Cooking.Application;
-using Cooking.Application.Abstractions.Authentication;
+﻿using Cooking.Application;
 using Cooking.Application.Abstractions.Caching;
 using Cooking.Application.Abstractions.Clock;
 using Cooking.Application.Abstractions.Data;
-using Cooking.Application.Abstractions.Services;
 using Cooking.Domain.Abstractions;
-using Cooking.Domain.Carts;
-using Cooking.Domain.Orders;
+using Cooking.Domain.Categories;
+using Cooking.Domain.Comments;
+using Cooking.Domain.Ingredients;
 using Cooking.Domain.Products;
-using Cooking.Domain.Stores;
-using Cooking.Infrastructure.Authentication;
+using Cooking.Domain.Recipes;
+using Cooking.Domain.Users;
 using Cooking.Infrastructure.Caching;
 using Cooking.Infrastructure.Clock;
 using Cooking.Infrastructure.Data;
 using Cooking.Infrastructure.Outbox;
 using Cooking.Infrastructure.Repositories;
-using Cooking.Infrastructure.Services;
+using Dapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Quartz;
 
 namespace Cooking.Infrastructure;
@@ -40,8 +37,13 @@ public static class InfrastructureSettings
 
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
 
-        //services.AddScoped<IOrderRepository, OrderRepository>();
-
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<ICommentRepository, CommentRepository>();
+        services.AddScoped<IIngredientRepository, IngredientRepository>();
+        services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IRecipeRepository, RecipeRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
         services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));

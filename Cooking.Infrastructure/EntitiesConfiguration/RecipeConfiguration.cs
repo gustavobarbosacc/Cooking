@@ -13,7 +13,7 @@ internal class RecipeConfiguration : IEntityTypeConfiguration<Recipe>
 {
     public void Configure(EntityTypeBuilder<Recipe> builder)
     {
-        builder.ToTable("categories");
+        builder.ToTable("recipes");
 
         builder.HasKey(x => x.Id);
 
