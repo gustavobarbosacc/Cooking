@@ -1,5 +1,4 @@
 ﻿using Cooking.Domain.Abstractions;
-using Cooking.Domain.Measures;
 using Cooking.Domain.Products;
 
 namespace Cooking.Domain.Ingredients;

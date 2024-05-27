@@ -1,5 +1,5 @@
 ﻿using Cooking.Application.Abstractions.Messaging;
-using Cooking.Domain.Measures;
+using Cooking.Domain.Ingredients;
 
 namespace Cooking.Application.Ingredients.Create;
 

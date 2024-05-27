@@ -1,4 +1,4 @@
-﻿using Cooking.Domain.Measures;
+﻿using Cooking.Domain.Ingredients;
 
 namespace Cooking.Application.Ingredients.Find;
 

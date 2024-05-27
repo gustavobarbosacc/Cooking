@@ -1,6 +1,5 @@
 ﻿using Cooking.Domain.Abstractions;
 using Cooking.Domain.Recipes;
-using Cooking.Domain.Users;
 
 namespace Cooking.Domain.Comments;
 

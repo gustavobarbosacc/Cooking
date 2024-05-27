@@ -1,4 +1,4 @@
-﻿using Cooking.Domain.Measures;
+﻿using Cooking.Domain.Ingredients;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

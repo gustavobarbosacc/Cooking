@@ -2,7 +2,6 @@
 using Cooking.Application.Abstractions.Messaging;
 using Cooking.Domain.Abstractions;
 using Cooking.Domain.Ingredients;
-using Cooking.Domain.Measures;
 using Cooking.Domain.Products;
 using Cooking.Domain.Recipes;
 
@@ -25,9 +24,9 @@ internal class CreateRecipeCommandHandler(
     public async Task<Result<Guid>> Handle(CreateRecipeCommand request, CancellationToken cancellationToken)
     {
 
-        var ingredients...
-        
-           
+        var ingredients = _ingredientRepository.GetByIdAsync(request.(List < Ingredient > Ingredients), cancellationToken);
+
+
 
         var recipe = Recipe.Create(
             request.UserId,

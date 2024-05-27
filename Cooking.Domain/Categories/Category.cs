@@ -3,7 +3,11 @@ using Cooking.Domain.Users;
 
 namespace Cooking.Domain.Categories;
 
-public class Category(Guid id, Guid userId, string name, DateTime CreatedOnUtc) : Entity(id)
+public class Category(
+    Guid id, 
+    Guid userId, 
+    string name, 
+    DateTime CreatedOnUtc) : Entity(id)
 {
     public Guid UserId { get; set; } = userId;
     public string Name { get; set; } = name;
