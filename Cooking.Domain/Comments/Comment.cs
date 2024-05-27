@@ -8,19 +8,38 @@ public class Comment(
     Guid id,
     Guid userId,
     Guid recipeId,
-    string remark) : Entity(id)
+    string remark,
+    DateTime CreatedOnUtc) : Entity(id)
 {
     public Guid UserId { get; set; } = userId;
     public Guid RecipeId { get; set; } = recipeId;
     public string Remark { get; set; } = remark;
 
+    public DateTime CreatedOnUtc { get; internal set; } = CreatedOnUtc;
+    public DateTime? UpdatedOnUtc { get; internal set; }
+    public DateTime? RemoveOnUtc { get; internal set; }
+
     public static Comment Create(
         Guid userId,
         Recipe recipe,
-        string remark) 
+        string remark,
+        DateTime utcNow) 
         => new (
             Guid.NewGuid(),
             userId,
             recipe.Id,
-            remark);
+            remark,
+            utcNow);
+
+    public Result RemoveOn(DateTime utcNow)
+    {
+        if (RemoveOnUtc is not null)
+        {
+            return Result.Failure(CommentErrors.NotFound);
+        }
+
+        RemoveOnUtc = utcNow;
+
+        return Result.Success();
+    }
 }

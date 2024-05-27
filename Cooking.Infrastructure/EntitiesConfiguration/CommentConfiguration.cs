@@ -23,6 +23,10 @@ internal class CommentConfiguration : IEntityTypeConfiguration<Comment>
 
         builder.Property(x => x.Remark).IsRequired();
 
+        builder.Property(e => e.CreatedOnUtc).IsRequired();
+        builder.Property(e => e.UpdatedOnUtc);
+        builder.Property(e => e.RemoveOnUtc);
+
         builder.HasOne<User>()
             .WithMany()
             .HasForeignKey(x => x.UserId);

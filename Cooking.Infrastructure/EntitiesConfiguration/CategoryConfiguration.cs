@@ -19,6 +19,10 @@ internal class CategoryConfiguration : IEntityTypeConfiguration<Category>
         builder.Property(x => x.Name)
             .IsRequired();
 
+        builder.Property(e => e.CreatedOnUtc).IsRequired();
+        builder.Property(e => e.UpdatedOnUtc);
+        builder.Property(e => e.RemoveOnUtc);
+
         builder.HasOne<User>()
             .WithMany()
             .HasForeignKey(x => x.UserId);

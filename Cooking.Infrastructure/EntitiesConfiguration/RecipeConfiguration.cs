@@ -29,7 +29,7 @@ internal class RecipeConfiguration : IEntityTypeConfiguration<Recipe>
         builder.Property(x => x.PreparationMethod)
             .IsRequired();
 
-        builder.Property(x => x.Levels)
+        builder.Property(x => x.Level)
             .IsRequired();
 
         builder.Property(x => x.Rating)
@@ -43,6 +43,10 @@ internal class RecipeConfiguration : IEntityTypeConfiguration<Recipe>
                 v => JsonConvert.SerializeObject(v),
                 v => JsonConvert.DeserializeObject<List<Ingredient>>(v)!)
             .Metadata.SetValueComparer(GetValueComparer<List<Ingredient>>());
+
+        builder.Property(e => e.CreatedOnUtc).IsRequired();
+        builder.Property(e => e.UpdatedOnUtc);
+        builder.Property(e => e.RemoveOnUtc);
 
         builder.HasOne<User>()
             .WithMany()

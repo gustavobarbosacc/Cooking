@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Cooking.Api.Controllers;
+namespace Cooking.Api.Controllers.Request;
 
 public class CreateUserRequest
 {

@@ -51,7 +51,10 @@ namespace Cooking.Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    RemoveOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,7 +73,10 @@ namespace Cooking.Infrastructure.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    RemoveOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -95,7 +101,10 @@ namespace Cooking.Infrastructure.Migrations
                     Levels = table.Column<int>(type: "integer", nullable: false),
                     Ingredients = table.Column<string>(type: "jsonb", nullable: false),
                     Rating = table.Column<short>(type: "smallint", nullable: false),
-                    PreparationTime = table.Column<int>(type: "integer", nullable: false)
+                    PreparationTime = table.Column<int>(type: "integer", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    RemoveOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -122,7 +131,10 @@ namespace Cooking.Infrastructure.Migrations
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     ProductId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Measure = table.Column<short>(type: "smallint", nullable: false)
+                    Measure = table.Column<short>(type: "smallint", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    RemoveOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -148,7 +160,10 @@ namespace Cooking.Infrastructure.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     RecipeId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Remark = table.Column<string>(type: "text", nullable: false)
+                    Remark = table.Column<string>(type: "text", nullable: false),
+                    CreatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    RemoveOnUtc = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {

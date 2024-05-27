@@ -1,4 +1,5 @@
-﻿using Cooking.Application.Users.Create;
+﻿using Cooking.Api.Controllers.Request;
+using Cooking.Application.Users.Create;
 using Cooking.Application.Users.Delete;
 using Cooking.Application.Users.Find;
 using Cooking.Application.Users.FindAll;
@@ -63,6 +64,4 @@ public class UsersController(ISender sender) : ControllerBase
 
         return result.IsSuccess ? Ok() : NotFound();
     }
-
-
 }

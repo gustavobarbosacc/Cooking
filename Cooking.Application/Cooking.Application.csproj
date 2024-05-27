@@ -18,27 +18,4 @@
     <ProjectReference Include="..\Cooking.Domain\Cooking.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Categories\Create\" />
-    <Folder Include="Categories\Find\" />
-    <Folder Include="Categories\FindAll\" />
-    <Folder Include="Categories\Delete\" />
-    <Folder Include="Comments\Create\" />
-    <Folder Include="Comments\Delete\" />
-    <Folder Include="Comments\FindAll\" />
-    <Folder Include="Comments\Find\" />
-    <Folder Include="Ingredients\Create\" />
-    <Folder Include="Ingredients\Delete\" />
-    <Folder Include="Ingredients\FindAll\" />
-    <Folder Include="Ingredients\Find\" />
-    <Folder Include="Products\Create\" />
-    <Folder Include="Products\Delete\" />
-    <Folder Include="Products\FindAll\" />
-    <Folder Include="Products\Find\" />
-    <Folder Include="Recipes\Create\" />
-    <Folder Include="Recipes\Delete\" />
-    <Folder Include="Recipes\FindAll\" />
-    <Folder Include="Recipes\Find\" />
-  </ItemGroup>
-
 </Project>

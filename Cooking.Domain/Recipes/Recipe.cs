@@ -10,36 +10,55 @@ public class Recipe(
     Guid categoryId,
     string name,
     string preparationMethod,
-    int levels,
+    int level,
     Rating rating,
     int preparationTime,
-    List<Ingredient> ingredients) : Entity(id)
+    List<Ingredient> ingredients,
+    DateTime CreatedOnUtc) : Entity(id)
 {
     public Guid UserId { get; set; } = userId;
     public Guid CategoryId { get; set; } = categoryId;
     public string Name { get; set; } = name;
     public string PreparationMethod { get; set; } = preparationMethod;
-    public int Levels { get; set; } = levels;
+    public int Level { get; set; } = level;
     public List<Ingredient> Ingredients { get; set; } = ingredients;
     public Rating Rating { get; set; } = rating;
     public int PreparationTime { get; set; } = preparationTime;
+
+    public DateTime CreatedOnUtc { get; internal set; } = CreatedOnUtc;
+    public DateTime? UpdatedOnUtc { get; internal set; }
+    public DateTime? RemoveOnUtc { get; internal set; }
 
     public static Recipe Create(
         Guid userId,
         string name,
         string preparationMethod,
-        int levels,
+        int level,
         List<Ingredient> ingredients,
         Category category,
         Rating rating,
-        int preparationTime) => new (
+        int preparationTime,
+         DateTime utcNow) => new (
             Guid.NewGuid(),
             userId,
             category.Id,
             name,
             preparationMethod,
-            levels,
+            level,
             rating,
             preparationTime,
-            ingredients);
+            ingredients,
+            utcNow);
+
+    public Result RemoveOn(DateTime utcNow)
+    {
+        if (RemoveOnUtc is not null)
+        {
+            return Result.Failure(RecipeErrors.NotFound);
+        }
+
+        RemoveOnUtc = utcNow;
+
+        return Result.Success();
+    }
 }

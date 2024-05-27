@@ -27,9 +27,12 @@ internal class IngredientConfiguration : IEntityTypeConfiguration<Ingredient>
         builder.Property(x => x.Measure)
             .IsRequired()
             .HasConversion<short>();
+   
+        builder.Property(e => e.CreatedOnUtc).IsRequired();
+        builder.Property(e => e.UpdatedOnUtc);
+        builder.Property(e => e.RemoveOnUtc);
 
         // relacoes 
-
         builder.HasOne<User>()
             .WithMany()
             .HasForeignKey(x => x.UserId);
