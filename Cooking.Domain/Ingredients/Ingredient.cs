@@ -10,6 +10,7 @@ public class Ingredient(
     string name,
     double quantity, 
     DateTime CreatedOnUtc) : Entity(id)
+
 {
     public Guid UserId { get; set; } = userId;
     public Guid ProductId { get; set; } = productId;
@@ -21,8 +22,20 @@ public DateTime CreatedOnUtc { get; internal set; } = CreatedOnUtc;
     public DateTime? UpdatedOnUtc { get; internal set; }
     public DateTime? RemoveOnUtc { get; internal set; }
 
-    public static Ingredient Create(Guid userId, Guid productId, Measure measure, string name, double quantity, DateTime utcNow)
-        => new(Guid.NewGuid(), userId, productId, measure, name, quantity, utcNow);
+    public static Ingredient Create(
+        Guid userId,
+        Guid productId,
+        Measure measure,
+        string name,
+        double quantity,
+        DateTime utcNow)
+            => new(Guid.NewGuid(),
+                userId,
+                productId,
+                measure,
+                name,
+                quantity,
+                utcNow);
 
     public Result RemoveOn(DateTime utcNow)
     {

@@ -11,4 +11,8 @@ public class IngredientErrors
     public static readonly Error NotProductFound = new(
         "Product.NotProductFound",
         "The Product with the specified identifier was not found");
+
+    public static readonly Error NotMeasureFound = new(
+        "Measure.NotProductFound",
+        "The Measure with the specified identifier was not found");
 }

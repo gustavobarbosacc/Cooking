@@ -1,5 +1,4 @@
 ﻿using Cooking.Application.Abstractions.Messaging;
-using Cooking.Domain.Ingredients;
 using Cooking.Domain.Recipes;
 
 namespace Cooking.Application.Recipes.Create;
@@ -7,9 +6,9 @@ namespace Cooking.Application.Recipes.Create;
 public record CreateRecipeCommand(
     Guid UserId,
     Guid CategoryId,
-    string Name,
+    string Title,
     string PreparationMethod,
     int Level,
-    List<Ingredient> Ingredients,
+    List<Guid> Ingredients,
     Rating Rating,
     int PreparationTime) : ICommand<Guid>;

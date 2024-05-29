@@ -1,8 +1,4 @@
 ﻿using Cooking.Api.Controllers.Request;
-using Cooking.Application.Categories.Create;
-using Cooking.Application.Categories.Delete;
-using Cooking.Application.Categories.Find;
-using Cooking.Application.Categories.FindAll;
 using Cooking.Application.Ingredients.Create;
 using Cooking.Application.Ingredients.Delete;
 using Cooking.Application.Ingredients.Find;
@@ -28,8 +24,9 @@ public class IngredientsController(ISender sender) : ControllerBase
         var command = new CreateIngredientCommand(
             Guid.Parse("b67a9122-0ddc-4e48-a35e-747f563a6f8f"),
             request.ProductId,
+            request.measure,
             request.Name,
-            request.measure);
+            request.Quantity);
 
         var result = await _sender.Send(command, cancellationToken);
 

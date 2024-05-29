@@ -1,6 +1,4 @@
-﻿using Cooking.Domain.Users;
-
-namespace Cooking.Application.Categories.Find;
+﻿namespace Cooking.Application.Categories.Find;
 
 public class CategoryResponse
 {

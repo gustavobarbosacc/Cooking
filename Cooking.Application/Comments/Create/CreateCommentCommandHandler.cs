@@ -1,7 +1,6 @@
 ﻿using Cooking.Application.Abstractions.Clock;
 using Cooking.Application.Abstractions.Messaging;
 using Cooking.Domain.Abstractions;
-using Cooking.Domain.Categories;
 using Cooking.Domain.Comments;
 using Cooking.Domain.Recipes;
 

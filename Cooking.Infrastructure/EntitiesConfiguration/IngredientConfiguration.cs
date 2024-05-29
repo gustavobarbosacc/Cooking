@@ -1,6 +1,5 @@
 ﻿using Cooking.Domain.Ingredients;
 using Cooking.Domain.Products;
-using Cooking.Domain.Recipes;
 using Cooking.Domain.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -27,7 +26,10 @@ internal class IngredientConfiguration : IEntityTypeConfiguration<Ingredient>
         builder.Property(x => x.Measure)
             .IsRequired()
             .HasConversion<short>();
-   
+
+        builder.Property(x => x.Quantity)
+            .IsRequired();
+
         builder.Property(e => e.CreatedOnUtc).IsRequired();
         builder.Property(e => e.UpdatedOnUtc);
         builder.Property(e => e.RemoveOnUtc);

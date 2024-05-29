@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cooking.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+556a64feaa851dff9505e856ad7af7d3d90918f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb7b9dc130e5a778aa31ee593d8b0fb02ead28cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cooking.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cooking.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

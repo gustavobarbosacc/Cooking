@@ -3,6 +3,8 @@ using Cooking.Application.Abstractions.Messaging;
 using Cooking.Domain.Abstractions;
 using Cooking.Domain.Ingredients;
 using Cooking.Domain.Products;
+using Cooking.Domain.Users;
+using System.Xml.Linq;
 
 namespace Cooking.Application.Ingredients.Create;
 
@@ -24,16 +26,17 @@ internal class CreateIngredientCommandHandler(
         if (product is null)
         {
             return Result.Failure<Guid>(IngredientErrors.NotProductFound);
-        }
+        }       
 
         var ingredient = Ingredient.Create(
             request.UserId,
+            product.Id,
+            request.Measure,
             request.Name,
-            product,
-            request.measure,       
+            request.Quantity,
             _dateTimeProvider.UtcNow);
 
-        _ingredientRepository.Add(ingredient);
+    _ingredientRepository.Add(ingredient);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 

@@ -9,5 +9,6 @@ public class IngredientResponse
     public string Name { get; init; } = string.Empty;
     public Guid ProductId { get; init; }
     public Measure measure { get; init; }
+    public double Quantity { get; set; }
     public DateTime CreatedOnUtc { get; init; }
 }

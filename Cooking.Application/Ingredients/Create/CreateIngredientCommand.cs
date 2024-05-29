@@ -6,6 +6,6 @@ namespace Cooking.Application.Ingredients.Create;
 public record CreateIngredientCommand(
     Guid UserId,
     Guid ProductId,
+    Measure Measure,
     string Name,
-    Measure measure) : ICommand<Guid>;
-    
+    double Quantity) : ICommand<Guid>;
