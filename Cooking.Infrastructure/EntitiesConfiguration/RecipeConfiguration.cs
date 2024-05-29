@@ -23,7 +23,7 @@ internal class RecipeConfiguration : IEntityTypeConfiguration<Recipe>
         builder.Property(x => x.CategoryId)
             .IsRequired();
 
-        builder.Property(x => x.Name)
+        builder.Property(x => x.Title)
             .IsRequired();
 
         builder.Property(x => x.PreparationMethod)

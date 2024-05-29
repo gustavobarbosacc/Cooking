@@ -2,20 +2,16 @@
 using Cooking.Application.Abstractions.Messaging;
 using Cooking.Domain.Abstractions;
 using Cooking.Domain.Ingredients;
-using Cooking.Domain.Products;
 using Cooking.Domain.Recipes;
 
 namespace Cooking.Application.Recipes.Create;
 
-internal class CreateRecipeCommandHandler(
-    
-    IProductRepository productRepository, 
+internal class CreateRecipeCommandHandler(   
     IIngredientRepository ingredientRepository,
     IRecipeRepository recipeRepository,
     IUnitOfWork unitOfWork,
     IDateTimeProvider dateTimeProvider) : ICommandHandler<CreateRecipeCommand, Guid>
 {
-    public readonly IProductRepository _productRepository = productRepository;
     public readonly IIngredientRepository _ingredientRepository = ingredientRepository;
     public readonly IRecipeRepository _recipeRepository = recipeRepository;
     public readonly IUnitOfWork _unitOfWork = unitOfWork;
@@ -24,9 +20,10 @@ internal class CreateRecipeCommandHandler(
     public async Task<Result<Guid>> Handle(CreateRecipeCommand request, CancellationToken cancellationToken)
     {
 
-        var ingredients = _ingredientRepository.GetByIdAsync(request.(List < Ingredient > Ingredients), cancellationToken);
 
+        var ingredientList = new List<Ingredient>();
 
+       
 
         var recipe = Recipe.Create(
             request.UserId,
@@ -34,7 +31,7 @@ internal class CreateRecipeCommandHandler(
             request.Name,
             request.PreparationMethod,
             request.Level,
-            ingredients,
+          //  ingredientList,
             request.Rating,
             request.PreparationTime,            
             _dateTimeProvider.UtcNow);

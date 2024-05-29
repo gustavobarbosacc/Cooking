@@ -8,7 +8,7 @@ public class Recipe(
     Guid id,
     Guid userId,
     Guid categoryId,
-    string name,
+    string title,
     string preparationMethod,
     int level,
     Rating rating,
@@ -18,7 +18,7 @@ public class Recipe(
 {
     public Guid UserId { get; set; } = userId;
     public Guid CategoryId { get; set; } = categoryId;
-    public string Name { get; set; } = name;
+    public string Title { get; set; } = title;
     public string PreparationMethod { get; set; } = preparationMethod;
     public int Level { get; set; } = level;
     public List<Ingredient> Ingredients { get; set; } = ingredients;
@@ -31,7 +31,7 @@ public class Recipe(
 
     public static Recipe Create(
         Guid userId,
-        string name,
+        string title,
         string preparationMethod,
         int level,
         List<Ingredient> ingredients,
@@ -42,7 +42,7 @@ public class Recipe(
             Guid.NewGuid(),
             userId,
             category.Id,
-            name,
+            title,
             preparationMethod,
             level,
             rating,
