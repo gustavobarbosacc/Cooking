@@ -1,9 +1,3 @@
-C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.csproj.AssemblyReference.cache
-C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.AssemblyInfoInputs.cache
-C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.AssemblyInfo.cs
-C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.csproj.CoreCompileInputs.cache
-C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.sourcelink.json
 C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Infrastructure.deps.json
 C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Infrastructure.dll
 C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Infrastructure.pdb
@@ -11,6 +5,12 @@ C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Application
 C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Domain.dll
 C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Application.pdb
 C:\developer\Cooking\Cooking.Infrastructure\bin\Debug\net8.0\Cooking.Domain.pdb
+C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.csproj.AssemblyReference.cache
+C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.AssemblyInfoInputs.cache
+C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.AssemblyInfo.cs
+C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.csproj.CoreCompileInputs.cache
+C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.sourcelink.json
 C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking..47946703.Up2Date
 C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\Cooking.Infrastructure.dll
 C:\developer\Cooking\Cooking.Infrastructure\obj\Debug\net8.0\refint\Cooking.Infrastructure.dll

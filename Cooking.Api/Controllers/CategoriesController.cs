@@ -3,7 +3,6 @@ using Cooking.Application.Categories.Create;
 using Cooking.Application.Categories.Delete;
 using Cooking.Application.Categories.Find;
 using Cooking.Application.Categories.FindAll;
-using Cooking.Application.Users.Create;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

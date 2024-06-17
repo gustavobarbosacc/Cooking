@@ -25,6 +25,9 @@ internal class UserConfiguration : IEntityTypeConfiguration<User>
             .IsRequired()
             .HasConversion<short>();
 
+        builder.HasIndex(x => x.Email)
+            .IsUnique();
+
         builder.Property(e => e.CreatedOnUtc).IsRequired();
         builder.Property(e => e.UpdatedOnUtc);
         builder.Property(e => e.RemoveOnUtc);

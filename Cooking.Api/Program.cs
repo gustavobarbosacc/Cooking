@@ -3,6 +3,15 @@ using Cooking.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors( options =>
+{
+    options.AddPolicy("AllowLocalHost", policy =>
+    {
+        policy.WithOrigins("http://localhost:5500", "http://127.0.0.1:5500")
+        .SetIsOriginAllowed(isOriginAllowed: _ => true)
+        .AllowAnyHeader().AllowAnyMethod();
+    });
+});
 // Add services to the container.
 
 builder.Services.AddControllers();

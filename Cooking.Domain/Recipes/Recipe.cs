@@ -11,9 +11,9 @@ public class Recipe(
     string title,
     string preparationMethod,
     int level,
+    List<Ingredient> ingredients,
     Rating rating,
     int preparationTime,
-    List<Ingredient> ingredients,
     DateTime CreatedOnUtc) : Entity(id)
 {
     public Guid UserId { get; set; } = userId;
@@ -31,11 +31,11 @@ public class Recipe(
 
     public static Recipe Create(
         Guid userId,
+        Category category,
         string title,
         string preparationMethod,
         int level,
         List<Ingredient> ingredients,
-        Category category,
         Rating rating,
         int preparationTime,
          DateTime utcNow) => new (
@@ -45,9 +45,9 @@ public class Recipe(
             title,
             preparationMethod,
             level,
+            ingredients,
             rating,
             preparationTime,
-            ingredients,
             utcNow);
 
     public Result RemoveOn(DateTime utcNow)

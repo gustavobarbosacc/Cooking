@@ -38,11 +38,11 @@ internal class CreateRecipeCommandHandler(
 
         var recipe = Recipe.Create(
             request.UserId,
+            category,
             request.Title,
             request.PreparationMethod,
             request.Level,
             ingredient,
-            category,
             request.Rating,
             request.PreparationTime,            
             _dateTimeProvider.UtcNow);

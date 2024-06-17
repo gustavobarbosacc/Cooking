@@ -3,8 +3,6 @@ using Cooking.Application.Abstractions.Messaging;
 using Cooking.Domain.Abstractions;
 using Cooking.Domain.Ingredients;
 using Cooking.Domain.Products;
-using Cooking.Domain.Users;
-using System.Xml.Linq;
 
 namespace Cooking.Application.Ingredients.Create;
 

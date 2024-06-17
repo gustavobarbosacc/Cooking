@@ -3,21 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking.Domain", "Cooking.Domain\Cooking.Domain.csproj", "{E80CD019-8C53-41C8-B3C8-BD892C27466A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooking.Domain", "Cooking.Domain\Cooking.Domain.csproj", "{E80CD019-8C53-41C8-B3C8-BD892C27466A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking.Infrastructure", "Cooking.Infrastructure\Cooking.Infrastructure.csproj", "{47F37420-9D2A-45A8-BF66-48D7A3B4F0D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooking.Infrastructure", "Cooking.Infrastructure\Cooking.Infrastructure.csproj", "{47F37420-9D2A-45A8-BF66-48D7A3B4F0D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking.Application", "Cooking.Application\Cooking.Application.csproj", "{6F7B46BF-CCC1-43E1-A7EE-773AE2DAC10B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooking.Application", "Cooking.Application\Cooking.Application.csproj", "{6F7B46BF-CCC1-43E1-A7EE-773AE2DAC10B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking.Api", "Cooking.Api\Cooking.Api.csproj", "{61D7DFA3-1542-4902-9A63-0542BA68731B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooking.Api", "Cooking.Api\Cooking.Api.csproj", "{61D7DFA3-1542-4902-9A63-0542BA68731B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking.Web", "Cooking.Web\Cooking.Web.csproj", "{6D7A9B22-86C1-405C-9821-80906C2984D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E80CD019-8C53-41C8-B3C8-BD892C27466A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +35,15 @@ Global
 		{61D7DFA3-1542-4902-9A63-0542BA68731B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D7DFA3-1542-4902-9A63-0542BA68731B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61D7DFA3-1542-4902-9A63-0542BA68731B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7A9B22-86C1-405C-9821-80906C2984D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7A9B22-86C1-405C-9821-80906C2984D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7A9B22-86C1-405C-9821-80906C2984D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7A9B22-86C1-405C-9821-80906C2984D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C458FBD-4E48-4C57-AFA4-6F46D806335A}
 	EndGlobalSection
 EndGlobal
